@@ -1,0 +1,37 @@
+{
+  "name": "com.sbk",
+  "version": "1.0.0",
+  "description": "backend for wrapit-up",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sbkinternproject/Wrap-iT-Up-Backend.git"
+  },
+  "keywords": [
+    "express",
+    "cors",
+    "dotenv",
+    "bcrypt",
+    "jsonwebtoken",
+    "mongoose",
+    "nodemon"
+  ],
+  "author": "sbk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sbkinternproject/Wrap-iT-Up-Backend/issues"
+  },
+  "homepage": "https://github.com/sbkinternproject/Wrap-iT-Up-Backend#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.4.0",
+    "nodemon": "^2.0.18"
+  }
+}
