@@ -13,7 +13,6 @@ const userController = {
             name: request.body.name.toLowerCase(),
             emailid: request.body.emailid.toLowerCase(),
             password: request.body.password,
-            confirmPassword: request.body.confirmPassword,
             imageURL: request.body.imageURL,
             isVerify: request.body.isVerify
         };
