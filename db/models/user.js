@@ -10,7 +10,6 @@ const userSchema = new Schema(
     confirmPassword: { type: SchemaTypes.String, required: true, min: 8, max: 25 },
     imageURL: {type: SchemaTypes.String, required: true, unique: true},
     isVerify: {type: SchemaTypes.Boolean, required: true}
-
   },
   { timestamps: true }
 );

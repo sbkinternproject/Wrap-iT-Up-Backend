@@ -9,5 +9,5 @@ const { show, register, login } = require("../../controllers/user");
 const { SHOW, REGISTER, LOGIN } = require("../../utils/config").ROUTES.USER;
 router.get(SHOW, show);
 router.post(REGISTER, register);
-router.get(LOGIN, login);
+router.post(LOGIN, login);
 module.exports = router;

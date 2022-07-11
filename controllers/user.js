@@ -33,8 +33,31 @@ const userController = {
             }
         );
     },
-    login(request, response){
+    async login(request, response){
         // response.send("You are in Login URL");
+        const user = request.body;
+        try {
+            const doc = await userOperations.login(user);
+            if (doc) {
+              // Generate a Token
+              let token = jwt.generateToken(user.emailid);
+              response
+                .status(SUCCESS)
+                .json({
+                  message: messageBundle["LOGIN.SUCCESS"],
+                  name: doc.name,
+                  token: token,
+                  doc: doc
+                });
+            } else {
+              response
+                .status(NOT_FOUND)
+                .json({ message: messageBundle["LOGIN.INVALID"] });
+            }
+            // console.log("JSON is ", json);
+          } catch (err) {
+            console.log(err);
+          }
     }
 }
 module.exports = userController; 
