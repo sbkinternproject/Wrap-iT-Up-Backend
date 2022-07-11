@@ -9,7 +9,11 @@ require("dotenv").config();
 app.use(express.json()); // {key:value}
 app.use(express.urlencoded()); // key=value&key=value
 
+const { ROOT } = require("./utils/config").ROUTES;
+app.use(cors());
+app.use(ROOT, require("./api/routes/user"));
 
+app.use(require("./utils/middleswares/404"));
 const server = app.listen(process.env.PORT || 1234, (err) => {
   if (err) {
     console.log("App Crash ", err);
