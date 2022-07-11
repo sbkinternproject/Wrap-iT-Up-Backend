@@ -11,6 +11,9 @@ app.use(express.urlencoded()); // key=value&key=value
 
 const { ROOT } = require("./utils/config").ROUTES;
 app.use(cors());
+app.get(ROOT, (req, res) => {
+  res.sendFile(__dirname+"/public/index.html");
+})
 app.use(ROOT, require("./api/routes/user"));
 
 app.use(require("./utils/middleswares/404"));
@@ -22,6 +25,3 @@ const server = app.listen(process.env.PORT || 1234, (err) => {
   }
 });
 
-app.get('/', (req, res) => {
-    res.sendFile(__dirname+"/public/index.html");
-})

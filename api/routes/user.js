@@ -1,10 +1,13 @@
+const { response } = require("express");
 const express = require("express");
 const router = express.Router();
 // const { <functionName>, <functionName> } = require("../../controllers/user");
 // const { LOGIN, REGISTER } = require("../../utils/config").ROUTES.USER;
 // router.get(PROFILE, <functionName>);
 // router.post(LOGIN, <functionName>);
-const { show } = require("../../controllers/user");
-const { SHOW } = require("../../utils/config").ROUTES.USER;
+const { show, register, login } = require("../../controllers/user");
+const { SHOW, REGISTER, LOGIN } = require("../../utils/config").ROUTES.USER;
 router.get(SHOW, show);
+router.post(REGISTER, register);
+router.get(LOGIN, login);
 module.exports = router;
