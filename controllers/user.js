@@ -50,13 +50,18 @@ const userController = {
             imageURL: request.body.imageURL,
             isVerify: request.body.isVerify
         };
-        console.log(userObject);
+        // console.log(userObject);
         const promise = userOperations.register(userObject);
         promise.then(
             (doc) => {
                 response
                   .status(SUCCESS)
-                  .json({ message: messageBundle["REGISTER.SUCCESS"], doc: doc });
+                  .json({ message: messageBundle["REGISTER.SUCCESS"],
+                  name: doc.name,
+                  emailid: doc.emailid,
+                  imageURL: doc.imageURL,
+                  isVerify: doc.isVerify,
+                });
             }
         ).catch(
             (err) => {
@@ -79,8 +84,10 @@ const userController = {
                 .json({
                   message: messageBundle["LOGIN.SUCCESS"],
                   name: doc.name,
+                  emailid: doc.emailid,
+                  imageURL: doc.imageURL,
+                  isVerify: doc.isVerify,
                   token: token,
-                  doc: doc
                 });
             } else {
               response
