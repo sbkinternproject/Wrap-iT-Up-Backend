@@ -6,8 +6,9 @@ const productSchema = new Schema(
   {
     image: { type: SchemaTypes.String, required: true, unique: true },
     name: { type: SchemaTypes.String, required: true },
-    description: { type: SchemaTypes.Array, required: true},
+    description: { type: SchemaTypes.String, required: true},
     price: { type: SchemaTypes.Number, required: true},
+    category: {type: SchemaTypes.String, required: true}
   },
   { timestamps: true }
 );

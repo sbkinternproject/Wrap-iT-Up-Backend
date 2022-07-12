@@ -17,7 +17,9 @@ module.exports = {
         SHOW: "/show"
       },
       PRODUCT: {
-        
+        REGISTER: "/registerProduct",
+        PRODUCTS: "/products",
+        SHOWPRODUCTBYCATEGORY: "/showProductByCategory/:category",
       },
     },
   };
