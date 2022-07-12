@@ -8,20 +8,37 @@ const userController = {
       response.send("U r on Show Section");
     },
     getRegister(request, response){
-      console.log(__dirname);
+      // console.log(__dirname);
       var directory = __dirname;
       var directoryArray = directory.split('/');
-      console.log(directoryArray);
-      console.log(directoryArray.length);
+      // console.log(directoryArray);
+      // console.log(directoryArray.length);
       directoryArray.pop();
-      console.log(directoryArray);
+      // console.log(directoryArray);
       // var pathFinal = directoryArray.toString();
       var pathFinal = "";
       for(var i = 0 ;i < directoryArray.length;i++){
         pathFinal = pathFinal + directoryArray.at(i)+"/";
       }
       
-      console.log(pathFinal);
+      // console.log(pathFinal);
+      response.sendFile(pathFinal+"public/getRequest.html");
+    },
+    getLogin(request, response){
+      // console.log(__dirname);
+      var directory = __dirname;
+      var directoryArray = directory.split('/');
+      // console.log(directoryArray);
+      // console.log(directoryArray.length);
+      directoryArray.pop();
+      // console.log(directoryArray);
+      // var pathFinal = directoryArray.toString();
+      var pathFinal = "";
+      for(var i = 0 ;i < directoryArray.length;i++){
+        pathFinal = pathFinal + directoryArray.at(i)+"/";
+      }
+      
+      // console.log(pathFinal);
       response.sendFile(pathFinal+"public/getRequest.html");
     },
     register(request, response){
