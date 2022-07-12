@@ -8,7 +8,8 @@ const userSchema = new Schema(
     emailid: { type: SchemaTypes.String, required: true, unique: true},
     password: { type: SchemaTypes.String, required: true, min: 8, max: 25 },
     imageURL: {type: SchemaTypes.String, required: true, unique: true},
-    isVerify: {type: SchemaTypes.Boolean, required: true}
+    isVerify: {type: SchemaTypes.Boolean, required: true},
+    userType: {type: SchemaTypes.String, required: true},
   },
   { timestamps: true }
 );

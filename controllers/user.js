@@ -48,7 +48,8 @@ const userController = {
             emailid: request.body.emailid.toLowerCase(),
             password: request.body.password,
             imageURL: request.body.imageURL,
-            isVerify: request.body.isVerify
+            isVerify: request.body.isVerify,
+            userType: request.body.userType
         };
         // console.log(userObject);
         const promise = userOperations.register(userObject);
@@ -61,6 +62,7 @@ const userController = {
                   emailid: doc.emailid,
                   imageURL: doc.imageURL,
                   isVerify: doc.isVerify,
+                  userType: doc.userType
                 });
             }
         ).catch(
@@ -87,6 +89,7 @@ const userController = {
                   emailid: doc.emailid,
                   imageURL: doc.imageURL,
                   isVerify: doc.isVerify,
+                  userType: doc.userType,
                   token: token,
                 });
             } else {
