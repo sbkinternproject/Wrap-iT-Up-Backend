@@ -7,6 +7,23 @@ const userController = {
     show(request, response) {
       response.send("U r on Show Section");
     },
+    getRegister(request, response){
+      console.log(__dirname);
+      var directory = __dirname;
+      var directoryArray = directory.split('/');
+      console.log(directoryArray);
+      console.log(directoryArray.length);
+      directoryArray.pop();
+      console.log(directoryArray);
+      // var pathFinal = directoryArray.toString();
+      var pathFinal = "";
+      for(var i = 0 ;i < directoryArray.length;i++){
+        pathFinal = pathFinal + directoryArray.at(i)+"/";
+      }
+      
+      console.log(pathFinal);
+      response.sendFile(pathFinal+"public/getRequest.html");
+    },
     register(request, response){
         // response.send("You are on Register URL now");
         let userObject = {
@@ -54,9 +71,9 @@ const userController = {
                 .json({ message: messageBundle["LOGIN.INVALID"] });
             }
             // console.log("JSON is ", json);
-          } catch (err) {
+        }catch (err) {
             console.log(err);
-          }
+        }
     }
 }
 module.exports = userController; 
