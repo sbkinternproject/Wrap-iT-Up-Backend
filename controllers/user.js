@@ -48,6 +48,7 @@ const userController = {
             emailid: request.body.emailid.toLowerCase(),
             password: request.body.password,
             imageURL: request.body.imageURL,
+            phoneNo: request.body.phoneNo,
             isVerify: request.body.isVerify,
             userType: request.body.userType
         };
@@ -61,12 +62,14 @@ const userController = {
                   name: doc.name,
                   emailid: doc.emailid,
                   imageURL: doc.imageURL,
+                  phoneNo: doc.phoneNo,
                   isVerify: doc.isVerify,
                   userType: doc.userType
                 });
             }
         ).catch(
             (err) => {
+              // console.log(err);
                 response
                   .status(SERVER_ERROR)
                   .json({ message: messageBundle["REGISTER.FAIL"] });
@@ -99,7 +102,7 @@ const userController = {
             }
             // console.log("JSON is ", json);
         }catch (err) {
-            console.log(err);
+            // console.log(err);
         }
     }
 }
