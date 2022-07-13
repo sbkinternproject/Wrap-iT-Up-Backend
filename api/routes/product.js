@@ -1,8 +1,10 @@
 const express = require("express");
 const router = express.Router();
-const { registerProduct, showAllProducts, showProductByCategory } = require("../../controllers/product");
-const { REGISTER , PRODUCTS, SHOWPRODUCTBYCATEGORY } = require("../../utils/config").ROUTES.PRODUCT;
+const { registerProduct, showAllProducts, showProductByCategory, deleteProduct, updateProduct } = require("../../controllers/product");
+const { REGISTER , PRODUCTS, SHOWPRODUCTBYCATEGORY, DELETEPRODUCT, UPDATEPRODUCT } = require("../../utils/config").ROUTES.PRODUCT;
 router.post(REGISTER, registerProduct);
 router.get(PRODUCTS, showAllProducts);
 router.get(SHOWPRODUCTBYCATEGORY, showProductByCategory);
+router.get(DELETEPRODUCT, deleteProduct);
+router.post(UPDATEPRODUCT, updateProduct);
 module.exports = router;

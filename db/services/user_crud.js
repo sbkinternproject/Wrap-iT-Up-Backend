@@ -17,5 +17,9 @@ module.exports = {
         }
       }
       return null;
+    },
+    async getUserType(emailId){
+      let promise = await UserModel.findOne({ emailid: emailId });
+      return promise;
     }
   };

@@ -20,4 +20,9 @@ module.exports = {
       return false;
     }
   },
+  getTokenDetails(tokenId){
+    var emailid = jwt.verify(tokenId, this.secret).userid;
+    return emailid;
+  }
+
 };

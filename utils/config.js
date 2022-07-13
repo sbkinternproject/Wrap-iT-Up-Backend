@@ -20,6 +20,8 @@ module.exports = {
         REGISTER: "/registerProduct",
         PRODUCTS: "/products",
         SHOWPRODUCTBYCATEGORY: "/showProductByCategory/:category",
+        DELETEPRODUCT: "/deleteProduct/:product",
+        UPDATEPRODUCT: "/updateProduct/:product",
       },
     },
   };

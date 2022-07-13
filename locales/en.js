@@ -9,5 +9,13 @@ module.exports = {
     "PRODUCT.ALL": "All Products",
     "PRODUCT.ALL.FAIL": "Unable to Retrieve All Products",
     "PRODUCT.CATEGORY.ALL": "Particular Category Product",
-    "PRODUCT.CATEGORY.FAIL": "Unable to Load Category Products"
+    "PRODUCT.CATEGORY.FAIL": "Unable to Load Category Products",
+    "PRODUCT.DELETE.SUCCESS": "Product Deleted Successfully",
+    "PRODUCT.DELETE.FAIL": "Unable to Delete Product",
+    "PRODUCT.UPDATE.SUCCESS": "Updated Successfully",
+    "PRODUCT.UPDATE.FAIL": "Unable to Update the Product",
+    "AUTH.NOTOKEN": "You have to Login First",
+    "AUTH.TOKEN.EXPIRED": "You have to Login Again with your Credentials",
+    "AUTH.TOKEN.SUCCESS": "Your Token is Verified",
+    "USER.ADMIN.NOT": "User is not an Admin"
 };
